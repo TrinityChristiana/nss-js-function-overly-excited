@@ -8,10 +8,14 @@ let sentence = ["The","walrus","danced","through","the","trees","in","the","ligh
     the array as the sole argument. It should iterate over the array
     and output the words to the browser console.
 */
-let addExcitement = (theWordArray, character) => {
+let addExcitement = (theWordArray, character, multiply) => {
 
     // Each time the for loop executes, you're going to add one more word to this string
     let buildMeUp = "";
+    let characterMultiple = ""
+    for (let j = 0; j < multiply; j++){
+        characterMultiple = `${characterMultiple}${character}`;
+    }
 
     for (let i = 0; i < theWordArray.length; i++) {
         /*
@@ -24,7 +28,7 @@ let addExcitement = (theWordArray, character) => {
          */
         if ((i + 1) % 3 == 0){
 
-            buildMeUp = `${buildMeUp} ${theWordArray[i]}${character}`;
+            buildMeUp = `${buildMeUp} ${theWordArray[i]}${characterMultiple}`;
             // Print buildMeUp to the console
             console.log(buildMeUp);
         } else {
@@ -39,4 +43,7 @@ let addExcitement = (theWordArray, character) => {
 };
 
 // Add a new argument to the function so that a developer can specify which character should be displayed instead of it always being an exclamation point.
-addExcitement(sentence, "?");
+
+// Add a new argument to the function so that a developer can specify how many times the special character should be added.
+
+addExcitement(sentence, "?", 5);
