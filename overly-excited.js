@@ -1,3 +1,5 @@
+// Rewrite functions with arrow function syntax
+
 // Create an addExcitement function that should console.log() rows of words. It should take an array containing the words of a sentence and output them in the developer console.
 
 // Create an array that contains the words in the sentence
